@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Lath ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:"Playfair Display",serif}
+body{background:linear-gradient(135deg,#e8d9f5,#d9c4ec,#eee3f7);color:#3f3150;overflow-x:hidden}
+.screen{min-height:100vh;display:none;align-items:center;justify-content:center;padding:28px}
+.screen.active{display:flex;animation:fade .8s ease}
+.card{width:min(900px,100%);text-align:center}
+.hero h1{font-family:Caveat,cursive;font-size:clamp(4rem,11vw,8rem);margin:0 0 25px;color:#59426c;text-shadow:0 3px 15px #fff7}
+button{border:0;border-radius:999px;padding:14px 30px;background:#70558b;color:white;font:600 1rem "Playfair Display";cursor:pointer;box-shadow:0 8px 22px #62447733;transition:.2s}
+button:hover{transform:translateY(-2px);background:#614675}
+.message-card{background:#ffffffaa;backdrop-filter:blur(8px);padding:35px clamp(22px,5vw,60px);border-radius:28px;box-shadow:0 20px 60px #50376320;text-align:left;line-height:1.8;font-size:clamp(1rem,1.6vw,1.13rem)}
+.message-card p{margin:0 0 18px}.message-card .sign{font-family:Caveat,cursive;font-size:2rem;text-align:right;margin-top:15px}
+.next{text-align:center;margin-top:24px}
+.gallery-title{font-family:Caveat,cursive;font-size:3.5rem;margin:0 0 20px;color:#59426c}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:0 auto 28px;max-width:700px}
+.photo{aspect-ratio:1/1;background:#ffffff77;border:2px dashed #9279a8;border-radius:20px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#725b82}
+.photo img{width:100%;height:100%;object-fit:cover}
+.music{background:#ffffff99;padding:20px;border-radius:22px;max-width:700px;margin:auto}
+.song{display:flex;align-items:center;gap:12px;margin:9px 0;background:#fff9;padding:10px 14px;border-radius:14px}
+.song button{padding:9px 17px;font-size:.85rem}.song span{flex:1;text-align:left}
+.small{font-size:.85rem;opacity:.75;margin-top:10px}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:600px){.photos{gap:10px}.message-card{line-height:1.65}}
+</style>
+</head>
+<body>
+<section id="home" class="screen active">
+ <div class="card hero">
+  <h1>Happy Birthday Lath</h1>
+  <button onclick="show('message')">Thank you ♡</button>
+ </div>
+</section>
+
+<section id="message" class="screen">
+ <div class="card">
+  <div class="message-card">
+   <p>First things first, I'm very Grateful to have you as a friend, and i must say the way we met, that is the closest i will ever come to believing in fate.</p>
+   <p>Almost 5 years now, and even rn it feels kinda surreal that i found someone like you out of sheer luck.</p>
+   <p>Someone like you.. someone who's kind, compassionate, caring (in your own way) and oh so loving.</p>
+   <p>I'm not gonna say things which ive already said .. i mean atp ik im kinda repeating myself from the past birthdays but you truly have been a blessing in my life.</p>
+   <p>I know you dont accept gifts, so this is jus a lil smth that i worked on and i hope it makes you smile?</p>
+   <p><b>Secondly,</b></p>
+   <p>I must apologize for .. a lot ? not really but yea lol .. i can act very dumbb at times and you put up with all that very well .. rest assured , i wont be acting that dumb more often from now on.</p>
+   <p>I wanna keep this a bit short so.. <b>Lastly,</b></p>
+   <p>Whatever happens, ill be there.<br>You will always be my best friend.<br>that comes first. and that will never change.</p>
+   <p class="sign">Love ya &lt;3</p>
+  </div>
+  <div class="next"><button onclick="show('gallery')">One more thing →</button></div>
+ </div>
+</section>
+
+<section id="gallery" class="screen">
+ <div class="card">
+  <h2 class="gallery-title">A few memories ♡</h2>
+  <div class="photos">
+   <div class="photo"><img src="assets/photos/photo1.jpg" alt="Photo 1" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 1'"></div>
+   <div class="photo"><img src="assets/photos/photo2.jpg" alt="Photo 2" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 2'"></div>
+   <div class="photo"><img src="assets/photos/photo3.jpg" alt="Photo 3" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 3'"></div>
+   <div class="photo"><img src="assets/photos/photo4.jpg" alt="Photo 4" onerror="this.style.display='none';this.parentElement.innerHTML='PHOTO 4'"></div>
+  </div>
+  <div class="music">
+   <b>Our soundtrack</b>
+   <div class="song"><button onclick="playSong(0)">▶ Play</button><span id="name0">Song 1 — add your file</span></div>
+   <div class="song"><button onclick="playSong(1)">▶ Play</button><span id="name1">Song 2 — add your file</span></div>
+   <div class="song"><button onclick="playSong(2)">▶ Play</button><span id="name2">Song 3 — add your file</span></div>
+   <div class="song"><button onclick="playSong(3)">▶ Play</button><span id="name3">Song 4 — add your file</span></div>
+   <div class="small">Put your MP3 files in <b>assets/music</b> and update the filenames in this page.</div>
+  </div>
+ </div>
+</section>
+
+<audio id="audio"></audio>
+<script>
+const songs=[
+ "assets/music/song1.mp3",
+ "assets/music/song2.mp3",
+ "assets/music/song3.mp3",
+ "assets/music/song4.mp3"
+];
+let current=-1;
+function show(id){
+ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+ window.scrollTo(0,0);
+}
+function playSong(i){
+ const audio=document.getElementById("audio");
+ if(current===i && !audio.paused){audio.pause();return}
+ current=i; audio.src=songs[i]; audio.play().catch(()=>alert("Add your MP3 file to assets/music first."));
+}
+</script>
+</body>
+</html>
